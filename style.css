@@ -15,7 +15,7 @@
     align-items: center;
 }
 .logo img {
-    background-image: url("logo-mini.png");
+    background-image: url("assets/logo-mini.png");
     width: 45px;
     height: 45px;
     margin-right: 10px;
@@ -51,52 +51,81 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(247, 251, 254);
 }
-.banner{
-    background-image: url("assets/banner.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: darken;
-  background: 
-  linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
-  url("assets/banner.jpg");;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: rgb(241, 239, 239);
-  min-height: 92vh;
-  padding:4rem 1.5rem;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.banner-style{
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url("assets/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 30px;   
+    padding: 0 20px;
 }
+
+.banner-style{
+    max-width: 850px;
+}
+
 .banner-style h1{
-    font-size: clamp(2.8rem, 5vw, 4.4rem);
-  line-height: 1.1;
-  font-weight: 800;
-  margin-bottom: 1.2rem;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 25px;
 }
+
+.banner-style em{
+    font-style: italic;
+    font-weight: 700;
+}
+
 .banner-style p{
-     font-size: 1.1rem;
-  max-width: 650px;
-  margin: 0 auto 2rem;
-  color: rgba(255, 255, 255, 0.85);
+    color: #e5e7eb;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto 55px;
 }
+
 .btn{
     display: inline-block;
-    margin-top: 45px;
-    background: #2F55D4;
-    color: #fff;
     text-decoration: none;
-    padding: 16px 38px;
+    background: #2563eb;
+    color: #fff;
+    padding: 18px 42px;
     border-radius: 8px;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37,99,235,0.35);
+}
+@media (max-width: 768px) {
+    .banner{
+        min-height: 85vh;
+        padding: 0 1.25rem 3rem;
+    }
+    .banner h1{
+        font-size: clamp(2.4rem, 10vw, 3.8rem);
+    }
+    .banner p{
+        font-size: 1rem;
+    }
 }
 .speakers {
     padding: 80px;
